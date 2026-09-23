@@ -1,4 +1,4 @@
-# 📊 Ad Campaign Performance Dashboard
+# 📊 Campaign Intelligence Dashboard
 
 Cross-platform ad campaign analytics dashboard tracking CTR, CPC, CPM, ROAS, and CPA across Google Ads, Meta Ads, and TikTok Ads. Built to surface performance patterns, flag underperforming campaigns, and support budget-allocation decisions.
 
