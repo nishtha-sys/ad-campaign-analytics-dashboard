@@ -125,3 +125,30 @@ st.markdown(f"""
 """)
 
 st.caption("Data source: Global Ads Performance dataset (Kaggle) · Built by Nishtha Sahani")
+# ---------------- EXECUTIVE ACTION SUMMARY ----------------
+st.divider()
+st.subheader("🎯 From Fact to Executive Action")
+
+fact_col, insight_col, opp_col, action_col = st.columns(4)
+
+with fact_col:
+    st.markdown("**FACT**")
+    st.info(f"{best_platform} delivers {platform_roas.iloc[0]['ROAS']:.2f}x ROAS, "
+            f"the highest among selected platforms.")
+
+with insight_col:
+    st.markdown("**INSIGHT**")
+    st.info(f"Ad spend and ROAS are {'negatively' if spend_roas_corr < 0 else 'positively'} "
+            f"correlated ({spend_roas_corr:.2f}) — {worst_platform} spends heavily "
+            f"but returns less efficiently.")
+
+with opp_col:
+    st.markdown("**OPPORTUNITY**")
+    st.info(f"Reallocating budget from {worst_platform} toward {best_platform} "
+            f"could improve overall portfolio ROAS without increasing total spend.")
+
+with action_col:
+    st.markdown("**ACTION**")
+    st.info(f"Recommend shifting a portion of {worst_platform}'s budget to "
+            f"{best_platform} next cycle and re-evaluating {len(bottom10)} "
+            f"flagged underperforming campaigns for pause/rework.")
