@@ -1,14 +1,15 @@
 # 📊 Campaign Intelligence Dashboard
 
-Cross-platform ad campaign analytics dashboard tracking CTR, CPC, CPM, ROAS, and CPA across Google Ads, Meta Ads, and TikTok Ads. Built to surface performance patterns, flag underperforming campaigns, and support budget-allocation decisions.
+Cross-platform ad campaign analytics dashboard tracking CTR, CPC, CPM, ROAS, and CPA across Google Ads, Meta Ads, and TikTok Ads. Built to surface performance patterns, flag underperforming campaigns, and support budget-allocation decisions using a Fact → Insight → Opportunity → Action framework.
 
-🔗 **Live App:** [nishtha-ad-campaign-analytics-dashboard.streamlit.app](https://nishtha-ad-campaign-analytics-dashboard.streamlit.app/)
+🔗 **Live App:** https://nishtha-ad-campaign-analytics-dashboard.streamlit.app/
+🔗 **GitHub Repo:** https://github.com/nishtha-sys/ad-campaign-analytics-dashboard
 
 ---
 
 ## Overview
 
-This project analyzes 1,800 ad campaign records across 3 platforms, 4 campaign types, 5 industries, and 8 countries. It calculates and verifies core ad metrics, identifies performance drivers through correlation analysis, and presents findings through an interactive Streamlit dashboard.
+This project analyzes 1,800 ad campaign records across 3 platforms, 4 campaign types, 5 industries, and 8 countries. It calculates and verifies core ad metrics, identifies performance drivers through correlation analysis, and presents findings through an interactive Streamlit dashboard, including an executive-style Fact → Insight → Opportunity → Action summary.
 
 ## Key Findings
 
@@ -26,6 +27,7 @@ This project analyzes 1,800 ad campaign records across 3 platforms, 4 campaign t
 - Top/bottom 10 campaign leaderboard by ROAS
 - Correlation matrix across all core metrics
 - Auto-generated, filter-aware insights summary
+- Fact → Insight → Opportunity → Action executive recommendation panel
 
 ## Methodology
 
@@ -34,6 +36,7 @@ This project analyzes 1,800 ad campaign records across 3 platforms, 4 campaign t
 3. Conducted groupby aggregation analysis across platform, campaign type, and industry dimensions
 4. Ran Pearson correlation analysis to identify which cost metrics actually drive return, versus which merely correlate with spend
 5. Built interactive dashboard with cached data loading for performance
+6. Translated verified findings into an executive Fact → Insight → Opportunity → Action summary
 
 ## Tech Stack
 
@@ -54,13 +57,15 @@ ad-campaign-analytics-dashboard/
 │   └── ad_campaign_analysis.ipynb  # Full EDA and metric verification (Colab)
 ├── data/
 │   └── ad_campaign_cleaned.csv     # Cleaned dataset with engineered CPM feature
+├── .streamlit/
+│   └── config.toml                 # Dashboard color theme
 ├── requirements.txt
 └── README.md
 ```
 
 ## Running Locally
 
-```bash
+```
 git clone https://github.com/nishtha-sys/ad-campaign-analytics-dashboard.git
 cd ad-campaign-analytics-dashboard
 pip install -r requirements.txt
