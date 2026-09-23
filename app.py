@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Ad Campaign Performance Dashboard", layout="wide")
+st.set_page_config(page_title="Campaign Intelligence Dashboard", layout="wide")
 
 @st.cache_data
 def load_data():
@@ -12,7 +12,7 @@ def load_data():
 
 df = load_data()
 
-st.title("📊 Ad Campaign Performance Dashboard")
+st.title("📊 Campaign Intelligence Dashboard")
 st.caption("Cross-platform campaign analytics — Google Ads, Meta Ads, TikTok Ads")
 
 # ---------------- SIDEBAR FILTERS ----------------
